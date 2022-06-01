@@ -31,8 +31,10 @@ section.alternate-background {
   color: #ecdbc9;
 }
 
+/* --- change from 100px to 100% to show full image, mobile --- */
 main img {
-  width: 100px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -65,6 +67,18 @@ header {
   color: #ecdbc9;
 }
 
+/* --- change display proprty from default to flex + centers, mobile --- */
+header nav {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* --- display nav on single row, mobile --- */
+header nav ul {
+  display: flex;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -81,6 +95,7 @@ header nav ul li a:hover {
 }
 
 /* -------  Join Form ------- */
+
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
@@ -88,6 +103,11 @@ form {
 
 form label {
   font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  width: 200px;
+  vertical-align: top;
 }
 
 form select,
@@ -118,3 +138,39 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .logo {
+    font-size: 48px;
+    margin: 10px 0;
+    padding-top: 10px;
+  }
+
+  header nav {
+    margin-top: 5px;
+    font-size: 24px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .item-double {
+    flex: 2;
+    margin: 10px;
+  }
+
+}
