@@ -34,7 +34,6 @@ section.alternate-background {
 /* --- change from 100px to 100% to show full image, mobile --- */
 main img {
   width: 100%;
-  padding-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -42,10 +41,12 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .item {
-  flex: 1;
+  flex: 1; 
+  flex-direction: column;
   margin: 10px;
 }
 
@@ -59,11 +60,12 @@ header {
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .logo {
   font-family: "Tangerine", cursive;
-  font-size: 72px;
+  font-size: 48px;
   color: #ecdbc9;
 }
 
@@ -77,10 +79,12 @@ header nav {
 /* --- display nav on single row, mobile --- */
 header nav ul {
   display: flex;
+  justify-content: center;
 }
 
 header nav ul li {
   list-style-type: none;
+  font-size: smaller;
 }
 
 header nav ul li a {
@@ -101,19 +105,20 @@ form {
   padding: 10px;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form label {
   font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-  padding: 3px 6px;
-  width: 200px;
-  vertical-align: top;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  margin-left: 5px;
 }
 
 form button {
@@ -143,13 +148,7 @@ footer p {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
-  }
-
-  .logo {
-    font-size: 48px;
-    margin: 10px 0;
-    padding-top: 10px;
+    padding: 10px;
   }
 
   header nav {
@@ -163,14 +162,19 @@ footer p {
     align-items: center;
   }
 
+  .space-between {
+    align-content: space-between;
+  }
+
   .item {
-    flex: 1;
+    flex: 4;
     margin: 10px;
+    flex-direction: column;
   }
   
   .item-double {
-    flex: 2;
     margin: 10px;
+    flex: 2;
   }
 
 }
