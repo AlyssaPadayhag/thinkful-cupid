@@ -32,7 +32,7 @@ section.alternate-background {
 }
 
 /* --- change from 100px to 100% to show full image, mobile --- */
-main img {
+ img {
   width: 100%;
 }
 
@@ -60,7 +60,6 @@ header {
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .logo {
@@ -151,7 +150,7 @@ footer p {
     padding: 10px;
   }
 
-  header nav {
+   nav {
     margin-top: 5px;
     font-size: 24px;
   }
@@ -162,19 +161,6 @@ footer p {
     align-items: center;
   }
 
-  .space-between {
-    align-content: space-between;
-  }
-
-  .item {
-    flex: 4;
-    margin: 10px;
-    flex-direction: column;
-  }
   
-  .item-double {
-    margin: 10px;
-    flex: 2;
-  }
 
 }
